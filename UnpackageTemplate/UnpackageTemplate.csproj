@@ -4,26 +4,14 @@
     <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
     <ImplicitUsings>true</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <UseWinUI>true</UseWinUI>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
-    <Platforms>x86;x64;ARM64</Platforms>
   </PropertyGroup>
 
 	<PropertyGroup>
-		<!--启用 dotnet cli-->
-		<EnableMsixTooling>true</EnableMsixTooling>
+        <!--不自包含会引入俩个文件，并且在启动时提示安装WAS运行时，自包含运行时后就必须要指定特定架构了-->
+        <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+        <Platforms>x86;x64;ARM64</Platforms>
 	</PropertyGroup>
-
-  <ItemGroup>
-    <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\LockScreenLogo.scale-200.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.6901" />
