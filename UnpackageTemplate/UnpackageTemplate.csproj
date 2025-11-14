@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+    <TargetFramework>net9.0-windows10.0.26100.0</TargetFramework>
     <ImplicitUsings>true</ImplicitUsings>
     <Nullable>enable</Nullable>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -11,6 +11,9 @@
         <!--不自包含会引入俩个文件，并且在启动时提示安装WAS运行时，自包含运行时后就必须要指定特定架构了-->
         <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
         <Platforms>x86;x64;ARM64</Platforms>
+
+        <!--不知和等原因不加这个会导致 aot 后无法执行-->
+		<EnableMsixTooling>true</EnableMsixTooling>
 	</PropertyGroup>
 
   <ItemGroup>
