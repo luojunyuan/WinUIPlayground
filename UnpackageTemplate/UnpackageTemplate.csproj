@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net9.0-windows10.0.26100.0</TargetFramework>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
     <ImplicitUsings>true</ImplicitUsings>
     <Nullable>enable</Nullable>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -12,7 +12,7 @@
         <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
         <Platforms>x86;x64;ARM64</Platforms>
 
-        <!--不知和等原因不加这个会导致 aot 后无法执行-->
+        <!--不加这个会导致 cli publish 后缺少主程序的 pri 文件，然后无法执行-->
 		<EnableMsixTooling>true</EnableMsixTooling>
 	</PropertyGroup>
 
