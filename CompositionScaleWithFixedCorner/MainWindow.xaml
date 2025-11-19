@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="CompositionScaleWithFixedCorner.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CompositionScaleWithFixedCorner"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="CompositionScaleWithFixedCorner">
+
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" VerticalAlignment="Top" 
+                   x:Name="MyRect" Fill="Blue" Width="100" Height="100"/>
+
+        <Line HorizontalAlignment="Left" VerticalAlignment="Top" 
+              X1="0" Y1="0" 
+              X2="599" Y2="999"
+              Stroke="Black"
+              StrokeThickness="2">
+            <Line.RenderTransform>
+                <TranslateTransform Y="100" />
+            </Line.RenderTransform>
+        </Line>
+
+        <Button Content="Start" HorizontalAlignment="Left" Click="Button_Click" />
+    </Grid>
+</Window>

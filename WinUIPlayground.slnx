@@ -3,6 +3,10 @@
     <Platform Name="Any CPU" />
     <Platform Name="x64" />
   </Configurations>
+  <Project Path="CompositionScaleWithFixedCorner/CompositionScaleWithFixedCorner.csproj" Id="a01655f5-f572-405d-98b1-88c510f273c7">
+    <Platform Project="x64" />
+    <Deploy />
+  </Project>
   <Project Path="SizeTranslateAnimation/SizeTranslateAnimation.csproj" Id="7a12fe29-975d-4aab-9618-604d54485765">
     <Platform Project="x64" />
     <Deploy />
