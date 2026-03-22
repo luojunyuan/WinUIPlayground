@@ -1,0 +1,8 @@
+DwmSetWindowAttribute
+SetWindowPos
+HWND
+DWM_WINDOW_CORNER_PREFERENCE
+
+GetWindowLong
+SetWindowLong
+WINDOW_EX_STYLE
