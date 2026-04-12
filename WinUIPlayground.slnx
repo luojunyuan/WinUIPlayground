@@ -19,6 +19,10 @@
     <Platform Project="x64" />
     <Deploy Solution="*|Any CPU" />
   </Project>
+  <Project Path="HelloWorld/HelloWorld.csproj">
+    <Platform Project="x64" />
+    <Deploy />
+  </Project>
   <Project Path="WinUIPlayground/WinUIPlayground.csproj">
     <Platform Solution="*|x64" Project="x64" />
   </Project>
